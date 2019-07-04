@@ -63,3 +63,63 @@ a_n\cdot a_1\quad\cdots\quad a_n\cdot a_n
 \end{bmatrix}$
 
 $=g''(a^Tx)\cdot aa^T$
+
+# 2.
+## (a)
+$\forall x,\quad x^TAx=\sum^n_{i=1}\sum^n_{j=1}A_{ij}x_ix_j$
+
+$\because A_{ij}=z_iz_j$
+
+$\sum^n_{i=1}\sum^n_{j=1}A_{ij}x_ix_j=\sum^n_{i=1}\sum^n_{j=1}z_iz_jx_ix_j$
+
+$=\sum^n_{i=1}(z_ix_i)^2\geq0$
+
+$\therefore$ A is positive semidefinite
+
+## (b)
+$A=\begin{bmatrix}
+z_1z_1 \quad\cdots\quad z_1z_n\\
+z_2z_1 \quad\cdots\quad z_2z_n\\
+\vdots\\
+z_nz_1 \quad\cdots\quad z_nz_n
+\end{bmatrix}$
+
+row operatins (row i multiply $z_1/z_i$)
+$\rightarrow A=\begin{bmatrix}
+z_1z_1 \quad\cdots\quad  z_1z_n\\
+0 \quad\quad\cdots\quad\quad 0\\
+\vdots\\
+0 \quad\quad\cdots\quad\quad 0
+\end{bmatrix}$
+
+$\therefore$ rank of A equal 1
+
+From the dimension theory, we know that $rank + nullity = n$
+
+$\therefore$ dimenesion of null space is n - 1
+
+Also, null space consists of orthogonal vectors of $z^T$, so $Ax=zz^Tx$ will be 0
+
+## (c)
+$\forall x, \quad x^TBAB^Tx = (xB^T)A(B^Tx)$
+
+Let $\quad v = B^Tx$
+
+$v^TAv\geq0$, since A is positive semidefinite.
+
+$\therefore BAB^T$ is positive semidefinite.
+
+# 3.
+## (a)
+Since Matrix $T$ is invertible, $A=T\Lambda T^{-1} \rightarrow AT=\Lambda T$
+
+$\begin{bmatrix}
+    At^{(1)} \quad At^{(2)} \cdots At^{(n)}
+\end{bmatrix}=\begin{bmatrix}
+\lambda^{(1)}t^{(1)} \quad \lambda^{(2)}t^{(2)} \cdots \lambda^{(n)}t^{(n)}
+\end{bmatrix}$
+
+$\therefore \forall i=1 \cdots n$, 
+$At^{(i)}=\lambda t^{(i)}$
+
+## (b)
